@@ -1,9 +1,29 @@
-<!DOCTYPE html> <html lang="en"> <head> <title>Arjuna Core · Narayana</title> <meta charset="utf-8"> <meta content="width=device-width, initial-scale=1.0" name="viewport"> <meta content="" name="description"> <meta content="" name="author"> <link href="http://static.jboss.org/theme/css/bootstrap-community/3.2.0.0/bootstrap-community.min.css" media="screen" rel="stylesheet"> <!--[if lt IE 9]><script src="http://static.jboss.org/theme/js/libs/html5/pre3.6/html5.min.js"></script><![endif]--> <link href="/images/favicon.png" rel="icon" type="image/png"> <link href="http://static.jboss.org/example/images/apple-touch-icon-144x144-precomposed.png" rel="apple-touch-icon-precomposed" sizes="144x144"> <link href="http://static.jboss.org/example/images/apple-touch-icon-114x114-precomposed.png" rel="apple-touch-icon-precomposed" sizes="114x114"> <link href="http://static.jboss.org/example/images/apple-touch-icon-72x72-precomposed.png" rel="apple-touch-icon-precomposed" sizes="72x72"> <link href="http://static.jboss.org/example/images/apple-touch-icon-precomposed.png" rel="apple-touch-icon-precomposed"> <style>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Arjuna Core · Narayana</title>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="description">
+    <meta content="" name="author">
+    <link href="/stylesheets-source/_bootstrap-community.less" rel="stylesheet/less" type="text/css">
+    <!-- IE 6-8 support of HTML 5 elements -->
+    <!--[if lt IE 9]>
+      <script src="/cache/static.jboss.org/theme/js/libs/html5/pre3.6/html5.min.js"></script>
+    <![endif]-->
+    <!-- Defines the project favicon. Change these URLs to your specific project folder on static.jboss.org. -->
+    <link href="/images/favicon.png" rel="icon" type="image/png">
+    <link href="/images/apple-touch-icon-144x144-precomposed.png" rel="apple-touch-icon-precomposed" sizes="144x144">
+    <link href="/images/apple-touch-icon-114x114-precomposed.png" rel="apple-touch-icon-precomposed" sizes="114x114">
+    <link href="/images/apple-touch-icon-72x72-precomposed.png" rel="apple-touch-icon-precomposed" sizes="72x72">
+    <link href="/images/apple-touch-icon-precomposed.png" rel="apple-touch-icon-precomposed">
+    <!-- Defines the project banner. Change these URLs to your specific project folder on static.jboss.org -->
+    <style>
       @media (min-width: 980px) {
-        .banner { background-image: url(http://static.jboss.org/example/images/narayana-banner-1180px.png); height: 110px;  }
+        .banner { background-image: url(/images/narayana-banner-1180px.png); height: 110px;  }
       }
       @media (max-width: 979px) {
-        .banner { background-image: url(http://static.jboss.org/example/images/narayana-logo.png); background-repeat:no-repeat; background-position: center bottom; height: 60px; }
+        .banner { background-image: url(/images/narayana-logo.png); background-repeat:no-repeat; background-position: center bottom; height: 60px; }
       }
       @media (max-width: 650px) {
         .banner { width: 100%; margin: 0px auto; }
@@ -11,7 +31,10 @@
       @media (max-width: 450px) {
         .banner { height: 90px; }
       }
-    </style> <script src="http://static.jboss.org/theme/js/libs/jquery/jquery-1.9.1.min.js"></script> <style>
+    </style>
+    <script src="/cache/static.jboss.org/theme/js/libs/jquery/jquery-1.9.1.js"></script>
+    <script src="/javascripts/less-1.4.1.min.js"></script>
+    <style>
       /* adjusting the vertical spacing for when a stickynav is engaged */
       .breadcrumb-fixed > .active {
         color: #8c8f91;
@@ -28,45 +51,298 @@
       .breadcrumb-fixed > li {
         display: inline-block;
       }
-    </style> </head> <body> <div id=""> <ul class="visuallyhidden" id="top"> <li> <a accesskey="n" href="#nav" title="Skip to navigation">Skip to navigation</a> </li> <li> <a accesskey="c" href="#page" title="Skip to content">Skip to content</a> </li> </ul> <div class="container" id="content"> <div class="dropup"> <div id="ajbossproject">A JBoss Project</div> <a class="tabnav-closed" href="#" id="tab">Red Hat</a> <script>
+    </style>
+  </head>
+  <body>
+    <div id="">
+      <!-- begin accesibility skip to top -->
+      <ul class="visuallyhidden" id="top">
+        <li>
+          <a accesskey="n" href="#nav" title="Skip to navigation">Skip to navigation</a>
+        </li>
+        <li>
+          <a accesskey="c" href="#page" title="Skip to content">Skip to content</a>
+        </li>
+      </ul>
+      <div class="container" id="content">
+        <div class="dropup">
+          <div id="ajbossproject">A JBoss Project</div>
+          <a class="tabnav-closed" href="#" id="tab">Red Hat</a>
+          <script>
             window.addEventListener('load', function() { renderTabzilla("Narayana","narayana" , false ) }, false);
-          </script> </div> <div class="banner"> <a href="#"></a> <div class="taglinelight visible-lg">Premier open source transaction manager</div> </div> <div class="navbar navbar-inverse navbar-fix" id="sticky-navbar"> <div class="container-fluid"> <div class="navbar-header"> <button class="navbar-toggle collapsed" data-target="#navbar-1" data-toggle="collapse"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button> </div> <div class="collapse navbar-collapse" id="navbar-1"> <ul class="nav navbar-nav"> <li class=""><a href="/">Home</a></li> <li class=""><a href="/downloads">Downloads</a></li> <li class="active"><a href="/documentation">Documentation</a></li> <li class=""><a href="/community">Community</a></li> <li class="dropdown"> <a class="dropdown-toggle" data-toggle="dropdown" href="#">Source Code <b class="caret"></b></a> <ul class="dropdown-menu"> <li><a href="https://github.com/jbosstm">GitHub</a></li> <li><a href="https://source.jboss.org/browse/narayana">FishEye</a></li> </ul> </li> <li><a href="https://issues.jboss.org/browse/JBTM">Issue Tracker</a></li> </ul> </div> </div> </div> <div class='breadcrumb'><a class='breadcrumb_anchor ' href='http://jbosstm.github.io/index.html'>Narayana Homepage</a> / <a class='breadcrumb_anchor ' href='http://jbosstm.github.io/documentation/index.html'>Documentation</a> / <a class='breadcrumb_anchor active' href='http://jbosstm.github.io/documentation/arjuna-core/index.html'>Arjuna Core</a></div> <div id="equalHeightsLayout"> <div class="col-sm-9" id="maincol"> <h1>What is ArjunaCore?</h1> <p> ArjunaCore is a stand-alone transaction engine and associated toolkit for the construction of fault-tolerant applications using objects and (nested) atomic transactions. It forms the core component of several different HP products, including HP-TS, HP-WST and HP-MS and their Arjuna Technologies equivalents (ATS, AWST, AMS and the new AXTS.) </p> <p> Atomic transactions (transactions) are used in application programs to control the manipulation of persistent (long-lived) objects. Transactions have the following ACID properties: <ul> <li> <p> Atomic: if interrupted by failure, all effects are undone (rolled back). </p> </li> <li> <p> Consistent: the effects of a transaction preserve invariant properties. </p> </li> <li> <p> Isolated: a transaction's intermediate states are not visible to other transactions. Transactions appear to execute serially, even if they are performed concurrently. </p> </li> <li> <p> Durable: the effects of a completed transaction are persistent; they are never lost (except in a catastrophic failure). </p> </li> </ul> </p> <p> At the heart of every transaction processing system is a transaction manager (also known as a transaction coordinator). It is the transaction manager that is responsible for ensuring the atomicity and durability properties of the transactions under its control. The isolation and consistency are provided by transactional resources that participate in the transaction on behalf of applications and services. The coordinator must maintain a transaction log in case of failures and a recovery system to use this log to complete transactions that were in flight and caught by any failures (e.g., a machine or process crash). It is important to realize that this functionality if required by all transaction systems, whether or not they support distributed transactions. </p> <p> ArjunaCore provides this exact functionality in a highly optimized, configurable and extensible manner. It has an extremely small footprint (easily executable on mobile devices, for example) and deliberately knows nothing about distribution: it is concerned only with local (same process) transactions. However, importantly it has sufficient hooks to enable the transactions it creates to be distributed in a manner which makes sense for the environment in which it operates, e.g., CORBA IIOP or SOAP/XML. </p> <h2> What does it offer? </h2> <p> ArjunaCore offers the following features: <ul> <li> <p> Multi-threaded: transactions can have many threads operating within them concurrently. </p> </li> <li> <p> Nested transactions: transactions may be nested within one another. This allows for improved fault-tolerance the failure of a nested transaction does not automatically undo the work of the parent transaction) and modularity (nesting is transparent to applications, such that an object that requires transaction support can be constructed without a requirement that it must be invoked within a transaction - if it is then it's own transactions will simply be nested within the invokers and if it is not then the transactions will be top-level). </p> </li> <li> <p> Highly configurable: one of the key components to the performance of any transaction system is its log: the transaction log is used at many times during the lifetime of a transaction and the information it stores must be durable. Thus, disk I/O is a typical bottleneck to any transaction system. However, the usage patterns for transactions can also affect the log such that different log implementations perform better for different applications. Therefore, rather than provide a single log implementation, ArjunaCore allows different implementations to be plugged in at runtime to best suite the application requirements. </p> </li> <li> <p> Relaxation of properties across the ACID matrix: all of the ACID properties can be relaxed in a controlled manner. So, for example, the atomic nature of a traditional transaction can be modified to support OASIS BTP cohesive transactions. Furthermore, this means that the same transaction coordinator can be used to support many different transaction models. ArjunaCore provides the necessary support for BTP, but can also be used to support the various WS-CAF (or WS-T) transaction models. </p> </li> <li> <p> Optimised and performant: ArjunaCore has been developed in one form or another for over 15 years. In that time, it has been tuned and optimised to improve its performance. </p> </li> <li> <p> Adaptable failure recovery: arbitrary transactional resources can be enlisted with ArjunaCore transactions and recovery mechanisms can be provided that will be automatically driven by the failure recovery sub-system. </p> </li> </ul> </p> <p> Note, it is important to realize that ArjunaCore does not require any other software in order to run. It is a complete 100% pure Java implementation of a transaction system and does not require an ORB or application server in order to provide any of its functionality, including Transactional Objects for Java. </p> <h2> Transactional Objects for Java </h2> <p> In addition to the transaction engine, ArjunaCore provides a complete toolkit for the development of fault-tolerant applications using objects and transactions. The toolkit (Transactional Objects for Java) is similar to EJB, but has been around for as long as ArjunaCore. It also provides nested transaction support (including nested transaction aware resources), type specific concurrency control and does not have many of the restrictions of EJB. </p> <p> Transactional Objects for Java exploits object-oriented techniques to present programmers with a toolkit of Java classes from which application classes can inherit to obtain desired properties, such as persistence and concurrency control. These classes form a hierarchy, part of which is shown below. </p> <img class="img-responsive" src="/images/transactional-objects-for-java-diagram.gif"> <p> Apart from specifying the scopes of transactions, and setting appropriate locks within objects, the application programmer does not have any other responsibilities: Transactional Objects for Java (TXOJ) guarantee that transactional objects will be registered with, and be driven by, the appropriate transactions, and crash recovery mechanisms are invoked automatically in the event of failures. </p> </div> <div class="col-sm-3 well" id="rightcol"> <div class="div"> <h2>Other Resources</h2> <ul class="nav nav-pills nav-stacked"> <li class=""> <a href="/documentation/sub-projects"> <i class="icon-fixed-width icon-arrow-right"></i> Sub-Projects </a> </li> <li class=""> <a href="/documentation/architecture"> <i class="icon-fixed-width icon-arrow-right"></i> Architecture </a> </li> <li class="active"> <a href="/documentation/arjuna-core"> <i class="icon-fixed-width icon-arrow-right"></i> Arjuna Core </a> </li> <li class=""> <a href="/documentation/transaction-fundamentals"> <i class="icon-fixed-width icon-arrow-right"></i> Transaction Fundamentals </a> </li> <li class=""> <a href="/documentation/presentations"> <i class="icon-fixed-width icon-arrow-right"></i> Presentations </a> </li> <li class=""> <a href="/documentation/narayana-features"> <i class="icon-fixed-width icon-arrow-right"></i> Features </a> </li> <li class=""> <a href="/documentation/java-ee-support"> <i class="icon-fixed-width icon-arrow-right"></i> Java EE Support </a> </li> <li class=""> <a href="/documentation/platform-support"> <i class="icon-fixed-width icon-arrow-right"></i> Platform Support </a> </li> <li class=""> <a href="/documentation/why-choose-narayana"> <i class="icon-fixed-width icon-arrow-right"></i> Why Choose Narayana </a> </li> <li class=""> <a href="/documentation/web-services-support"> <i class="icon-fixed-width icon-arrow-right"></i> Web Services Support </a> </li> <li class=""> <a href="/documentation/history"> <i class="icon-fixed-width icon-arrow-right"></i> History </a> </li> </ul> </div> </div> </div> </div> <footer class="container"> <div class="row"> <div class="col-md-2 col-md-offset-1"> <h4>Navigate</h4> <ul class="list-unstyled"> <li> <a href="/documentation" title="Learn">Learn</a> </li> <li> <a href="https://github.com/jbosstm/quickstart" title="Get Started">Get Started</a> </li> <li> <a href="https://developer.jboss.org/en/jbosstm/?view=discussions" title="Forums">Forums</a> </li> <li> <a href="/downloads" title="Download">Download</a> </li> </ul> </div> <div class="col-md-2"> <h4>Follow Us</h4> <ul class="list-unstyled"> <li> <a href="http://jbossts.blogspot.co.uk/" title="Blog">Blog</a> </li> <li> <a href="https://lists.jboss.org/mailman/listinfo/jbossts-announce" title="Announce Mailing List">Announce Mailing List</a> </li> <li> <a href="https://lists.jboss.org/mailman/listinfo/jbossts-users" title="Users Mailing List">Users Mailing List</a> </li> <li> <a href="https://lists.jboss.org/mailman/listinfo/jbossts-commits" title="Commits Mailing List">Commits Mailing List</a> </li> <li> <a href="https://lists.jboss.org/mailman/listinfo/jbossts-dev" title="Developers Mailing List">Developers Mailing List</a> </li> <li> <a href="https://lists.jboss.org/mailman/listinfo/jbossts-issues" title="Issues Mailing List">Issues Mailing List</a> </li> </ul> </div> <div class="col-md-2"> <h4>Contribute</h4> <ul class="list-unstyled"> <li> <a href="https://issues.jboss.org/browse/JBTM/" title="Submit a bug">Submit a bug</a> </li> <li> <a href="https://github.com/jbosstm" title="Write code">Write Code</a> </li> </ul> </div> <div class="col-md-3 col-md-offset-1"> <h4>LGPL 2.1 License</h4> <p>All dependencies of this project are available under the LGPL or a compatible license.</p> </div> </div> </footer> <div class="container" id="companyfooter"> <div class="redhatlogo"> <div id="logospacer"></div> <a href="http://www.redhat.com/"><img src="http://static.jboss.org/theme/images/common/redhat_logo.png"></a> </div> </div> <span class="backToTop"> <a href="#top">back to top</a> </span> <script src="http://static.jboss.org/theme/js/libs/bootstrap-community/3.2.0.0/bootstrap-community.min.js"></script> <script type='text/javascript' language='JavaScript' src='http://www.redhat.com/j/elqNow/elqCfg.js'></script> <script type='text/javascript' language='JavaScript' src='http://www.redhat.com/j/elqNow/elqImg.js'></script> <div id="oTags"> <script type="text/javascript" src="//www.redhat.com/j/s_code.js"></script> <script type="text/javascript"><!--
-        var coreUrl = encodeURI(document.URL.split("?")[0]).replace(/-/g," ");
-        var urlSplit = coreUrl.toLowerCase().split(/\//);
-        var urlLast = urlSplit[urlSplit.length-1];
-        var pageNameString = "";
-        var siteName = "";
-        var minorSectionIndex = 3
-        if (urlLast == "") {
-            urlSplit.splice(-1,1);
-        }
-        if (urlLast.search(/\./) >= 0) {
-            if (urlLast == "index.html") {
-                urlSplit.splice(-1,1);
-            }
-            else {
-                urlSplit[urlSplit.length-1] = urlLast.split(".").splice(0,1);
-            }
-        }
-        siteName = urlSplit[2].split(".")[1];
-        s.prop14 = s.eVar27 = siteName || "";
-        s.prop15 = s.eVar28 = urlSplit[minorSectionIndex] || "";
-        s.prop16 = s.eVar29 = urlSplit[minorSectionIndex+1] || "";
-        pageNameString = urlSplit.splice(3).join(" | ");
-        s.pageName = "jboss | community | " + siteName + " | " + pageNameString;
-        s.server = "jboss";
-        s.channel = "jboss | community";
-        s.prop4 = s.eVar23 = encodeURI(document.URL);
-        s.prop21 = s.eVar18 = coreUrl;
-        s.prop2 = s.eVar22 = "en";
-        s.prop3 = s.eVar19 = "us";
-        //--></script> <script type="text/javascript" src="//www.redhat.com/j/rh_omni_footer.js"></script> <script language="JavaScript" type="text/javascript"><!--
-        if(navigator.appVersion.indexOf('MSIE')>=0)document.write(unescape('%3C')+'\!-'+'-')
-        //--></script> <noscript><a href="http://www.omniture.com" title="Web Analytics"><img src="https://smtrcs.redhat.com/b/ss/redhatcom,redhatglobal/1/H.25.4--NS/0?[AQB]&cdp=3&[AQE]" height="1" width="1" border="0" alt=""/></a></noscript> </div> <script type="text/javascript">
-      var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-      document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-      </script> <script type="text/javascript">
-      try {
-      var pageTracker = _gat._getTracker("UA-10656779-1");
-      pageTracker._trackPageview();
-      } catch(err) {}</script> </div> </body> </html>
+          </script>
+        </div>
+        <div class="banner">
+          <a href="#"></a>
+          <div class="taglinelight visible-lg">Premier open source transaction manager</div>
+        </div>
+        <div class="navbar navbar-inverse navbar-fix" id="sticky-navbar">
+          <div class="container-fluid">
+            <div class="navbar-header">
+              <button class="navbar-toggle collapsed" data-target="#navbar-1" data-toggle="collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-1">
+              <ul class="nav navbar-nav">
+                <li class=""><a href="/">Home</a></li>
+                <li class=""><a href="/downloads">Downloads</a></li>
+                <li class="active"><a href="/documentation">Documentation</a></li>
+                <li class=""><a href="/community">Community</a></li>
+                <li class="dropdown">
+                  <a class="dropdown-toggle" data-toggle="dropdown" href="#">Source Code <b class="caret"></b></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="https://github.com/jbosstm">GitHub</a></li>
+                    <li><a href="https://source.jboss.org/browse/narayana">FishEye</a></li>
+                  </ul>
+                </li>
+                <li><a href="https://issues.jboss.org/browse/JBTM">Issue Tracker</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class='breadcrumb'><a class='breadcrumb_anchor ' href='http://localhost:4242/index.html'
+                >Narayana Homepage</a> / <a class='breadcrumb_anchor ' href='http://localhost:4242/documentation/index.html'
+                >Documentation</a> / <a class='breadcrumb_anchor active' href='http://localhost:4242/documentation/arjuna-core/index.html'
+                >Arjuna Core</a></div>
+        <div id="equalHeightsLayout">
+          <div class="col-sm-9" id="maincol">
+            <h1>What is ArjunaCore?</h1>
+            <p>
+              ArjunaCore is a stand-alone transaction engine and associated toolkit for the construction of fault-tolerant applications using objects and (nested) atomic transactions. It forms the core component of several different HP products, including HP-TS, HP-WST and HP-MS and their Arjuna Technologies equivalents (ATS, AWST, AMS and the new AXTS.)
+            </p>
+            <p>
+              Atomic transactions (transactions) are used in application programs to control the manipulation of persistent (long-lived) objects. Transactions have the following ACID properties:
+              <ul>
+                <li>
+                  <p>
+                    Atomic: if interrupted by failure, all effects are undone (rolled back).
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    Consistent: the effects of a transaction preserve invariant properties.
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    Isolated: a transaction's intermediate states are not visible to other transactions. Transactions appear to execute serially, even if they are performed concurrently.
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    Durable: the effects of a completed transaction are persistent; they are never lost (except in a catastrophic failure).
+                  </p>
+                </li>
+              </ul>
+            </p>
+            <p>
+              At the heart of every transaction processing system is a transaction manager (also known as a transaction coordinator). It is the transaction manager that is responsible for ensuring the atomicity and durability properties of the transactions under its control. The isolation and consistency are provided by transactional resources that participate in the transaction on behalf of applications and services. The coordinator must maintain a transaction log in case of failures and a recovery system to use this log to complete transactions that were in flight and caught by any failures (e.g., a machine or process crash). It is important to realize that this functionality if required by all transaction systems, whether or not they support distributed transactions.
+            </p>
+            <p>
+              ArjunaCore provides this exact functionality in a highly optimized, configurable and extensible manner. It has an extremely small footprint (easily executable on mobile devices, for example) and deliberately knows nothing about distribution: it is concerned only with local (same process) transactions. However, importantly it has sufficient hooks to enable the transactions it creates to be distributed in a manner which makes sense for the environment in which it operates, e.g., CORBA IIOP or SOAP/XML.
+            </p>
+            <h2>
+              What does it offer?
+            </h2>
+            <p>
+              ArjunaCore offers the following features:
+              <ul>
+                <li>
+                  <p>
+                    Multi-threaded: transactions can have many threads operating within them concurrently.
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    Nested transactions: transactions may be nested within one another. This allows for improved fault-tolerance the failure of a nested transaction does not automatically undo the work of the parent transaction) and modularity (nesting is transparent to applications, such that an object that requires transaction support can be constructed without a requirement that it must be invoked within a transaction - if it is then it's own transactions will simply be nested within the invokers and if it is not then the transactions will be top-level).
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    Highly configurable: one of the key components to the performance of any transaction system is its log: the transaction log is used at many times during the lifetime of a transaction and the information it stores must be durable. Thus, disk I/O is a typical bottleneck to any transaction system. However, the usage patterns for transactions can also affect the log such that different log implementations perform better for different applications. Therefore, rather than provide a single log implementation, ArjunaCore allows different implementations to be plugged in at runtime to best suite the application requirements.
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    Relaxation of properties across the ACID matrix: all of the ACID properties can be relaxed in a controlled manner. So, for example, the atomic nature of a traditional transaction can be modified to support OASIS BTP cohesive transactions. Furthermore, this means that the same transaction coordinator can be used to support many different transaction models. ArjunaCore provides the necessary support for BTP, but can also be used to support the various WS-CAF (or WS-T) transaction models.
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    Optimised and performant: ArjunaCore has been developed in one form or another for over 15 years. In that time, it has been tuned and optimised to improve its performance.
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    Adaptable failure recovery: arbitrary transactional resources can be enlisted with ArjunaCore transactions and recovery mechanisms can be provided that will be automatically driven by the failure recovery sub-system.
+                  </p>
+                </li>
+              </ul>
+            </p>
+            <p>
+              Note, it is important to realize that ArjunaCore does not require any other software in order to run. It is a complete 100% pure Java implementation of a transaction system and does not require an ORB or application server in order to provide any of its functionality, including Transactional Objects for Java.
+            </p>
+            <h2>
+              Transactional Objects for Java
+            </h2>
+            <p>
+              In addition to the transaction engine, ArjunaCore provides a complete toolkit for the development of fault-tolerant applications using objects and transactions. The toolkit (Transactional Objects for Java) is similar to EJB, but has been around for as long as ArjunaCore. It also provides nested transaction support (including nested transaction aware resources), type specific concurrency control and does not have many of the restrictions of EJB.
+            </p>
+            <p>
+              Transactional Objects for Java exploits object-oriented techniques to present programmers with a toolkit of Java classes from which application classes can inherit to obtain desired properties, such as persistence and concurrency control. These classes form a hierarchy, part of which is shown below.
+            </p>
+            <img class="img-responsive" src="/images/transactional-objects-for-java-diagram.gif">
+            <p>
+              Apart from specifying the scopes of transactions, and setting appropriate locks within objects, the application programmer does not have any other responsibilities: Transactional Objects for Java (TXOJ) guarantee that transactional objects will be registered with, and be driven by, the appropriate transactions, and crash recovery mechanisms are invoked automatically in the event of failures.
+            </p>
+          </div>
+          <div class="col-sm-3 well" id="rightcol">
+            <div class="div">
+              <h2>Other Resources</h2>
+              <ul class="nav nav-pills nav-stacked">
+                <li class="">
+                  <a href="/documentation/sub-projects">
+                    <i class="icon-fixed-width icon-arrow-right"></i>
+                    Sub-Projects
+                  </a>
+                </li>
+                <li class="">
+                  <a href="/documentation/architecture">
+                    <i class="icon-fixed-width icon-arrow-right"></i>
+                    Architecture
+                  </a>
+                </li>
+                <li class="active">
+                  <a href="/documentation/arjuna-core">
+                    <i class="icon-fixed-width icon-arrow-right"></i>
+                    Arjuna Core
+                  </a>
+                </li>
+                <li class="">
+                  <a href="/documentation/transaction-fundamentals">
+                    <i class="icon-fixed-width icon-arrow-right"></i>
+                    Transaction Fundamentals
+                  </a>
+                </li>
+                <li class="">
+                  <a href="/documentation/presentations">
+                    <i class="icon-fixed-width icon-arrow-right"></i>
+                    Presentations
+                  </a>
+                </li>
+                <li class="">
+                  <a href="/documentation/narayana-features">
+                    <i class="icon-fixed-width icon-arrow-right"></i>
+                    Features
+                  </a>
+                </li>
+                <li class="">
+                  <a href="/documentation/java-ee-support">
+                    <i class="icon-fixed-width icon-arrow-right"></i>
+                    Java EE Support
+                  </a>
+                </li>
+                <li class="">
+                  <a href="/documentation/platform-support">
+                    <i class="icon-fixed-width icon-arrow-right"></i>
+                    Platform Support
+                  </a>
+                </li>
+                <li class="">
+                  <a href="/documentation/why-choose-narayana">
+                    <i class="icon-fixed-width icon-arrow-right"></i>
+                    Why Choose Narayana
+                  </a>
+                </li>
+                <li class="">
+                  <a href="/documentation/web-services-support">
+                    <i class="icon-fixed-width icon-arrow-right"></i>
+                    Web Services Support
+                  </a>
+                </li>
+                <li class="">
+                  <a href="/documentation/history">
+                    <i class="icon-fixed-width icon-arrow-right"></i>
+                    History
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer class="container">
+        <div class="row">
+          <div class="col-md-2 col-md-offset-1">
+            <h4>Navigate</h4>
+            <ul class="list-unstyled">
+              <li>
+                <a href="/documentation" title="Learn">Learn</a>
+              </li>
+              <li>
+                <a href="https://github.com/jbosstm/quickstart" title="Get Started">Get Started</a>
+              </li>
+              <li>
+                <a href="https://developer.jboss.org/en/jbosstm/?view=discussions" title="Forums">Forums</a>
+              </li>
+              <li>
+                <a href="/downloads" title="Download">Download</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-2">
+            <h4>Follow Us</h4>
+            <ul class="list-unstyled">
+              <li>
+                <a href="http://jbossts.blogspot.co.uk/" title="Blog">Blog</a>
+              </li>
+              <li>
+                <a href="https://lists.jboss.org/mailman/listinfo/jbossts-announce" title="Announce Mailing List">Announce Mailing List</a>
+              </li>
+              <li>
+                <a href="https://lists.jboss.org/mailman/listinfo/jbossts-users" title="Users Mailing List">Users Mailing List</a>
+              </li>
+              <li>
+                <a href="https://lists.jboss.org/mailman/listinfo/jbossts-commits" title="Commits Mailing List">Commits Mailing List</a>
+              </li>
+              <li>
+                <a href="https://lists.jboss.org/mailman/listinfo/jbossts-dev" title="Developers Mailing List">Developers Mailing List</a>
+              </li>
+              <li>
+                <a href="https://lists.jboss.org/mailman/listinfo/jbossts-issues" title="Issues Mailing List">Issues Mailing List</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-2">
+            <h4>Contribute</h4>
+            <ul class="list-unstyled">
+              <li>
+                <a href="https://issues.jboss.org/browse/JBTM/" title="Submit a bug">Submit a bug</a>
+              </li>
+              <li>
+                <a href="https://github.com/jbosstm" title="Write code">Write Code</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-3 col-md-offset-1">
+            <h4>LGPL 2.1 License</h4>
+            <p>All dependencies of this project are available under the LGPL or a compatible license.</p>
+          </div>
+        </div>
+      </footer>
+      <div class="container" id="companyfooter">
+        <div class="redhatlogo">
+          <div id="logospacer"></div>
+          <a href="http://www.redhat.com/"><img src="/cache/static.jboss.org/theme/images/common/redhat_logo.png"></a>
+        </div>
+      </div>
+      <span class="backToTop">
+        <a href="#top">back to top</a>
+      </span>
+      <script src="/javascripts/bootstrap-community.js"></script>
+    </div>
+  </body>
+</html>
