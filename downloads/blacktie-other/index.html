@@ -184,6 +184,38 @@
               </li>
             </ul>
           </div>
+          <div class="span4">
+            <section>
+              <h4>Latest forum discussions</h4>
+              <div id="forumDiv"></div>
+              <script>
+                $(document).ready(function () {
+                  $('#forumDiv').FeedEk({
+                    FeedUrl: 'https://developer.jboss.org/view-browse-feed.jspa?containerType=14&userID=5690&browseSite=place-content&filterID=contentstatus%5Bpublished%5D~objecttype~objecttype%5Bthread%5D&browseViewID=placeContent&containerID=2040',
+                    MaxCount: 2,
+                    ShowDesc: false,
+                    CharacterLimit: 200
+                  });
+                });
+              </script>
+            </section>
+          </div>
+          <div class="span4">
+            <section>
+              <h4>Latest news</h4>
+              <div id="blogDiv"></div>
+              <script>
+                $(document).ready(function () {
+                  $('#blogDiv').FeedEk({
+                    FeedUrl: 'http://jbossts.blogspot.com/feeds/posts/default',
+                    MaxCount: 2,
+                    ShowDesc: false,
+                    CharacterLimit: 200
+                  });
+                });
+              </script>
+            </section>
+          </div>
           <div class="div">
             <h2>Compliance</h2>
           </div>

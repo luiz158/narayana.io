@@ -242,102 +242,6 @@
               </p>
             </div>
           </div>
-          <div class="row">
-            <div class="col-md-6">
-              <div class="well">
-                <h2>Latest news</h2>
-                <div id="feed">
-                  <div class="text-center"></div>
-                  <i class="icon-refresh icon-spin icon-4x"></i>
-                </div>
-                <a href="http://jbossts.blogspot.com">More news</a>
-                <script src="https://www.google.com/jsapi" type="text/javascript"></script>
-                <script>
-                  google.load("feeds", "1");
-                  
-                  function initialize() {
-                    var feed = new google.feeds.Feed("http://jbossts.blogspot.com/feeds/posts/default");
-                    feed.setNumEntries(4);
-                    feed.load(function(result) {
-                      if (!result.error) {
-                        var feedDiv = $('#feed');
-                        feedDiv.empty();
-                        for (var i = 0; i < result.feed.entries.length; i++) {
-                          var entry = result.feed.entries[i];
-                          var entryDate = new Date(entry.publishedDate);
-                          var date_string =
-                            entryDate.getFullYear() + '-'
-                            + ('0' + entryDate.getDate()).slice(-2) + '-'
-                            + ('0' + (entryDate.getMonth()+1)).slice(-2);
-                          feedDiv.append(
-                            $('<div class="news"/>').append(
-                              $('<h5/>').text(entry.title)
-                            ).append(
-                              $('<small/>').text(date_string)
-                            ).append(
-                              $('<p/>').text(entry.contentSnippet).append(
-                                ' <a href="' + entry.link + '">more</a>'
-                              )
-                            ).append(
-                              '<hr/>'
-                            )
-                          );
-                        }
-                      }
-                    });
-                  }
-                  google.setOnLoadCallback(initialize);
-                </script>
-              </div>
-            </div>
-            <div class="col-md-6">
-              <div class="well">
-                <h2>Latest forum discussions</h2>
-                <div id="forumfeed">
-                  <div class="text-center"></div>
-                  <i class="icon-refresh icon-spin icon-4x"></i>
-                </div>
-                <a href="https://developer.jboss.org/en/jbosstm">More forum posts</a>
-                <script src="https://www.google.com/jsapi" type="text/javascript"></script>
-                <script>
-                  google.load("feeds", "1");
-                  
-                  function initialize() {
-                    var feed = new google.feeds.Feed("https://developer.jboss.org/view-browse-feed.jspa?containerType=14&userID=5690&browseSite=place-content&filterID=contentstatus%5Bpublished%5D~objecttype~objecttype%5Bthread%5D&browseViewID=placeContent&containerID=2040");
-                    feed.setNumEntries(4);
-                    feed.load(function(result) {
-                      if (!result.error) {
-                        var feedDiv = $('#forumfeed');
-                        feedDiv.empty();
-                        for (var i = 0; i < result.feed.entries.length; i++) {
-                          var entry = result.feed.entries[i];
-                          var entryDate = new Date(entry.publishedDate);
-                          var date_string =
-                            entryDate.getFullYear() + '-'
-                            + ('0' + entryDate.getDate()).slice(-2) + '-'
-                            + ('0' + (entryDate.getMonth()+1)).slice(-2);
-                          feedDiv.append(
-                            $('<div class="news"/>').append(
-                              $('<h5/>').text(entry.title)
-                            ).append(
-                              $('<small/>').text(date_string)
-                            ).append(
-                              $('<p/>').text(entry.contentSnippet.replace(/&lt;!--.*--&gt;/g, '').replace('&nbsp;', ' ')).append(
-                                ' <a href="' + entry.link + '">more</a>'
-                              )
-                            ).append(
-                              '<hr/>'
-                            )
-                          );
-                        }
-                      }
-                    });
-                  }
-                  google.setOnLoadCallback(initialize);
-                </script>
-              </div>
-            </div>
-          </div>
         </div>
         <div class="col-sm-3 well" id="rightcol">
           <div class="div">
@@ -380,6 +284,38 @@
                 </a>
               </li>
             </ul>
+          </div>
+          <div class="span4">
+            <section>
+              <h4>Latest forum discussions</h4>
+              <div id="forumDiv"></div>
+              <script>
+                $(document).ready(function () {
+                  $('#forumDiv').FeedEk({
+                    FeedUrl: 'https://developer.jboss.org/view-browse-feed.jspa?containerType=14&userID=5690&browseSite=place-content&filterID=contentstatus%5Bpublished%5D~objecttype~objecttype%5Bthread%5D&browseViewID=placeContent&containerID=2040',
+                    MaxCount: 2,
+                    ShowDesc: false,
+                    CharacterLimit: 200
+                  });
+                });
+              </script>
+            </section>
+          </div>
+          <div class="span4">
+            <section>
+              <h4>Latest news</h4>
+              <div id="blogDiv"></div>
+              <script>
+                $(document).ready(function () {
+                  $('#blogDiv').FeedEk({
+                    FeedUrl: 'http://jbossts.blogspot.com/feeds/posts/default',
+                    MaxCount: 2,
+                    ShowDesc: false,
+                    CharacterLimit: 200
+                  });
+                });
+              </script>
+            </section>
           </div>
           <div class="div">
             <h2>Compliance</h2>
